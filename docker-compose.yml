@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+ validacion_proyecto_microservicio:
+  container_name: 'validacion_proyecto'
+  image: validacion_proyecto:v1
+  build:
+   context: .
+  ports:
+   - "5001:4000"
+  networks:
+   - validacion_proyecto
+networks:
+ validacion_proyecto:
